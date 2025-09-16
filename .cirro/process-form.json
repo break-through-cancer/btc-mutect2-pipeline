@@ -1,0 +1,65 @@
+{
+  "form": {
+    "title": "Mutect2 (GATK)",
+    "type": "object",
+    "properties": {
+      "gatk_docker": {
+        "title": "Parameter 1",
+        "description": "Description of parameter 1",
+        "type": "string",
+        "default":"broadinstitute/gatk:4.2.4.0"
+      },
+      "ref_dict": {
+        "title": "Parameter 2",
+        "description": "Description of parameter 2",
+        "type": "string",
+        "multiple": false,
+        "pathType": "reference",
+        "file": "**/*",
+        "default": "s3://broad-references/hg38/v0/Homo_sapiens_assembly38.dict"
+      },
+      "ref_fai": {
+        "title": "Parameter 3",
+        "description": "Description of parameter 3",
+        "type": "string",
+        "multiple": false,
+        "pathType": "reference",
+        "file": "**/*",
+        "default":"s3://broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai"
+      },
+      "ref_fasta": {
+        "title": "Parameter 4",
+        "description": "Description of parameter 4",
+        "type": "string",
+        "multiple": false,
+        "pathType": "reference",
+        "file": "**/*",
+        "default": "s3://broad-references/hg38/v0/Homo_sapiens_assembly38.fasta"
+      },
+      "scatter_count": {
+        "title": "Parameter 5",
+        "description": "Description of parameter 5",
+        "type": "integer",
+        "default": 50
+      },
+      "tumor_reads": {
+        "title": "Parameter 6",
+        "description": "Description of parameter 6",
+        "type": "string",
+        "multiple": false,
+        "pathType": "dataset",
+        "file": "**/*"
+      },
+      "tumor_reads_index": {
+        "title": "Parameter 7",
+        "description": "Description of parameter 7",
+        "type": "string",
+        "multiple": false,
+        "pathType": "dataset",
+        "file": "**/*"
+      }
+    },
+    "required": []
+  },
+  "ui": {}
+}
